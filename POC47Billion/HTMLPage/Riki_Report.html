@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RIKI Reports</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+    <style>
+        .main-table {
+            width: 700px;
+            margin: 0 auto;
+            padding: 25px;
+            font-family: "Roboto", sans-serif;
+            background-color: #fff;
+        }
+
+        .calender-table th {
+            padding: 5px 6px;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        tr {
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+<body style="background-color: #ccc;">
+    <table border-spacing="0" cellpadding="0" cellspacing="0" class="main-table">
+        <tr>
+            <td align="center">
+                <span style="background: linear-gradient(90deg, rgba(193, 139, 64, 0) -30%, rgba(193, 57, 19, 1) 27%, rgba(36, 112, 230, 1) 46%, rgba(62, 200, 159, 1) 72%, rgba(47, 237, 237, 1) 100%, rgba(245, 250, 255, 1) 100%);height: 2px;display: block;"></span>
+            </td>
+            <td align="center" style="font-family: 'Roboto', sans-serif; letter-spacing: 3px; font-size: 25px; color: #000; font-weight: 600; width: 136px;">
+                47Billion
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 50%; text-align: left; vertical-align: text-top; padding-top: 20px;">
+                            <p style="margin: 0; font-size: 22px; font-weight: 600;">
+                                RIKI™ Report
+                            </p>
+                            <p style="margin: 0 0 30px; font-size: 17px; color: #ccc;">
+                                Alternative Data Intelligence
+                            </p>
+                            <p style="margin: 0; letter-spacing: 1px; font-size: 30px; color: #000; font-weight: 600; font-family: 'Roboto', sans-serif;">
+                                {RIKIasWords}
+                            </p>
+                        </td>
+                        <td style="width: 50%; padding: 20px 0 20px 10px; text-align: left;">
+                            <table style="border: 1px solid #999; padding: 12px; border-radius: 10px; width: 100%;">
+                                <tr>
+                                    <td colspan="2"
+                                        style="background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(93, 31, 201, 1) 0%, rgba(180, 78, 218, 1) 100%);padding: 6px 10px 7px;border-radius: 4px;color: #fff;font-size: 12px;font-family: 'Roboto', sans-serif;">
+                                        Report Information
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px 0 5px 0; font-size: 13px; font-family: 'Roboto', sans-serif;">
+                                        Report ID
+                                    </td>
+                                    <td style="padding: 8px 0 5px 0; font-size: 13px; font-family: 'Roboto', sans-serif;">
+                                        {Id}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 8px 0 5px 0; font-size: 13px; font-family: 'Roboto', sans-serif;">
+                                        Report Date
+                                    </td>
+                                    <td style="padding: 8px 0 5px 0; font-size: 13px; font-family: 'Roboto', sans-serif;">
+                                        {Date}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px 0; font-size: 13px; font-family: 'Roboto', sans-serif;">
+                                        Email
+                                    </td>
+                                    <td style="padding: 5px 0; font-size: 13px; font-family: 'Roboto', sans-serif;">
+                                        {Email}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px 15px 5px 0; font-size: 13px; white-space: nowrap; font-family: 'Roboto', sans-serif;">
+                                        Phone Number
+                                    </td>
+                                    <td style="padding: 5px 0; font-size: 13px; font-family: 'Roboto', sans-serif;">
+                                        {PhoneNumber}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px 0; font-size: 13px; vertical-align: text-top; font-family: 'Roboto', sans-serif;">
+                                        History Available
+                                    </td>
+                                    <td style="padding: 5px 0; font-size: 13px; font-family: 'Roboto', sans-serif;">
+                                        {DepletionDays} Days
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding-bottom: 15px;">
+                <p style="font-size: 20px; font-weight: 500; margin: 0;">
+                    Ability to Pay Metrics
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 50%; padding-right: 10px; vertical-align: text-top;">
+                            <table style="border: 1px solid #999; padding: 12px 12px; border-radius: 10px; width: 100%;">
+                                <tr>
+                                    <td colspan="2"
+                                        style="background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(93, 31, 201, 1) 0%, rgba(180, 78, 218, 1) 100%);padding: 6px 10px 7px;border-radius: 4px;color: #fff;font-size: 12px;font-family: 'Roboto', sans-serif;">
+                                        RIKI Index
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 15px 0;">
+                                        <p style="color: #777; margin: 0; font-size: 35px; font-weight: 500; text-align: center;">
+                                            {RIKI}
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="font-size: 12px; margin: 0; font-weight: 500;">
+                                            Excellent Rating
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="font-size: 12px; margin: 0;">
+                                            Weighted combination of cash flow and income. Scale
+                                            <br />
+                                            centered on 100.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 50%; padding-left: 10px; white-space: nowrap; vertical-align: text-top;">
+                            <table style="border: 1px solid #999; padding: 12px 12px 42px; border-radius: 10px; width: 100%;">
+                                <tr>
+                                    <td colspan="2"
+                                        style="background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(93, 31, 201, 1) 0%, rgba(180, 78, 218, 1) 100%);padding: 6px 10px 7px;border-radius: 4px;color: #fff;font-size: 12px;font-family: 'Roboto', sans-serif;">
+                                        RIKI Trend
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 15px 0;">
+                                        <p style="color: #777; margin: 0; font-size: 35px; font-weight: 500; text-align: center;">
+                                            {CCTrend}
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="font-size: 12px; margin: 0;">
+                                            Trending up by 1.5 points monthly
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding-top: 20px;">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 50%; padding-right: 10px; vertical-align: text-top;">
+                            <table style="border: 1px solid #999; padding: 12px 12px; border-radius: 10px; width: 100%;">
+                                <tr>
+                                    <td colspan="2" style="background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(93, 31, 201, 1) 0%, rgba(180, 78, 218, 1) 100%);padding: 6px 10px 7px;border-radius: 4px;color: #fff;font-size: 12px;font-family: 'Roboto', sans-serif;">
+                                        Cash Flow Index
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 15px 0;">
+                                        <p style="color: #777; margin: 0; font-size: 35px; font-weight: 500; text-align: center;">
+                                            {CashFlowIndex}
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="font-size: 12px; margin: 0;">
+                                            Normal range (interquartile range) is 100-115
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 50%; padding-left: 10px; white-space: nowrap; vertical-align: text-top;">
+                            <table style="border: 1px solid #999; padding: 12px 12px 12px; border-radius: 10px; width: 100%;">
+                                <tr>
+                                    <td colspan="2"
+                                        style="background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(93, 31, 201, 1) 0%, rgba(180, 78, 218, 1) 100%);padding: 6px 10px 7px;border-radius: 4px;color: #fff;font-size: 12px;font-family: 'Roboto', sans-serif;">
+                                        Cash Flow Index Trend
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 15px 0;">
+                                        <p style="color: #777; margin: 0; font-size: 35px; font-weight: 500; text-align: center;">
+                                            {CashFlowIndexTrend}
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="font-size: 12px; margin: 0;">
+                                            Trending up 1.4 points monthly
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding-top: 30px;">
+                <table class="calender-table" style="width: 100%; border-spacing: 5px;">
+                    <tr style="font-family: 'Roboto', sans-serif;">
+                        <th></th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Jan-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Feb-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Mar-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Apr-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            May-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Jun-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Jul-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Aug-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Sep-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Oct-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Nov-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            dec-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Avg
+                        </th>
+                    </tr>
+                    <tr style="font-family: 'Roboto', sans-serif;">
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            Days in Month
+                        </td>
+                        {tableData}
+                    </tr>
+                    <tr style="font-family: 'Roboto', sans-serif;">
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            Data Completeness
+                        </td>
+                        {tableData1}
+                    </tr>
+                    <tr style="font-family: 'Roboto', sans-serif;">
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            # Accounts Tracked
+                        </td>
+                        {tableData2}
+                    </tr>
+                    <tr style="font-family: 'Roboto', sans-serif;">
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            # Income Transactions
+                        </td>
+                        {tableData3}
+                    </tr>
+                    <tr style="font-family: 'Roboto', sans-serif;">
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            # Expense Transactions
+                        </td>
+                        {tableData4}
+                    </tr>
+                    <tr style="font-family: 'Roboto', sans-serif;">
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            Total Income
+                        </td>
+                        {tableData5}
+                    </tr>
+                    <tr style="font-family: 'Roboto', sans-serif;">
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            Total Expenses
+                        </td>
+                        {tableData6}
+                    </tr>
+                    <tr style="font-family: 'Roboto', sans-serif;">
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            Total Money Handled
+                        </td>
+                        {tableData8}
+                    </tr>
+                    <tr style="font-family: 'Roboto', sans-serif;">
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            Largest Transaction
+                        </td>
+                        {tableData7}
+                    </tr>
+                    <tr>
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            Discretionary Spending
+                        </td>
+                        {tableData9}
+                    </tr>
+                    <tr style="font-family: 'Roboto', sans-serif;">
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            % Disc. Spending
+                        </td>
+                        {tableData10}
+                    </tr>
+                    <tr>
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            Available Income
+                        </td>
+                        {tableData11}
+                    </tr>
+                    <tr style="font-family: 'Roboto', sans-serif;">
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            Adjusted Av. Income
+                        </td>
+                        {tableData12}
+                    </tr>
+                    <tr style="font-family: 'Roboto', sans-serif;">
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            Average Daily Spend
+                        </td>
+                        {tableData13}
+                    </tr>
+                    <tr style="font-family: 'Roboto', sans-serif;">
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            Income/Expense Ratio
+                        </td>
+                        {tableData14}
+                    </tr>
+                    <tr style="font-family: 'Roboto', sans-serif;">
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            RIKI
+                        </td>
+                        {tableData15}
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2" style="padding: 30px 0;">
+                <span style="background: linear-gradient(90deg, rgba(193, 139, 64, 0) -30%, rgba(193, 57, 19, 1) 27%, rgba(36, 112, 230, 1) 46%, rgba(62, 200, 159, 1) 72%, rgba(47, 237, 237, 1) 100%, rgba(245, 250, 255, 1) 100%);height: 2px;display: block;"></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding-bottom: 15px;">
+                <p style="font-size: 20px; font-weight: 500; margin: 0; font-family: 'Roboto', sans-serif;">
+                    Income Analysis
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 33.3%; padding-right: 10px; vertical-align: text-top;">
+                            <table style="border: 1px solid #999; padding: 12px 12px; border-radius: 10px; width: 100%;">
+                                <tr>
+                                    <td colspan="2" style="background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(93, 31, 201, 1) 0%, rgba(180, 78, 218, 1) 100%);padding: 6px 10px 7px;border-radius: 4px;color: #fff;font-size: 12px;font-family: 'Roboto', sans-serif;">
+                                        Typical Monthly Income
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 15px 0;">
+                                        <p style="color: #777; margin: 0; font-size: 30px; font-weight: 500; text-align: center; font-family: 'Roboto', sans-serif;">
+                                            $ {TypicalMonthsTotalIncome}
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 15px;">
+                                        <p style="color: #777; margin: 0; font-size: 12px; font-weight: 500; text-align: center; font-family: 'Roboto', sans-serif;">
+                                            Average of typical months.
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p style="font-size: 12px; margin: 0; font-family: 'Roboto', sans-serif;">
+                                            <span style="color: #5d1fc9; font-weight: bold;">Monthly Income Trend:</span>
+                                            Approximately constant.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 33.3%; padding-right: 10px; padding-left: 10px; vertical-align: text-top;">
+                            <table style="border: 1px solid #999; padding: 12px 12px; border-radius: 10px; width: 100%;">
+                                <tr>
+                                    <td colspan="2"
+                                        style="background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(93, 31, 201, 1) 0%, rgba(180, 78, 218, 1) 100%);padding: 6px 10px 7px;border-radius: 4px;color: #fff;font-size: 12px;font-family: 'Roboto', sans-serif;">
+                                        Typical Monthly Residual Income
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 15px 0;">
+                                        <p style="color: #777; margin: 0; font-size: 30px; font-weight: 500; text-align: center; font-family: 'Roboto', sans-serif;">
+                                            $ {TypicalMonthsUnadjustedAvailableIncome}
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 33px;">
+                                        <p style="font-size: 12px; margin: 0; font-weight: 500; font-family: 'Roboto', sans-serif;">
+                                            Unspent income, average of typical months.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 33.3%; padding-right: 10px; padding-left: 10px; vertical-align: text-top;">
+                            <table style="border: 1px solid #999; padding: 12px 12px; border-radius: 10px; width: 100%;">
+                                <tr>
+                                    <td colspan="2"
+                                        style="background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(93, 31, 201, 1) 0%, rgba(180, 78, 218, 1) 100%);padding: 6px 10px 7px;border-radius: 4px;color: #fff;font-size: 12px;font-family: 'Roboto', sans-serif;">
+                                        Month-to-Month Stability Score
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 15px 0;">
+                                        <p style="color: #777; margin: 0; font-size: 30px; font-weight: 500; text-align: center; font-family: 'Roboto', sans-serif;">
+                                            {MonthToMonthStabilityScore}
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 33px;">
+                                        <p style="font-size: 12px; margin: 0; font-weight: 500; font-family: 'Roboto', sans-serif;">
+                                            Scale centered on 100.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2" style="padding: 30px 0;">
+                <span style="background: linear-gradient(90deg, rgba(193, 139, 64, 0) -30%, rgba(193, 57, 19, 1) 27%, rgba(36, 112, 230, 1) 46%, rgba(62, 200, 159, 1) 72%, rgba(47, 237, 237, 1) 100%, rgba(245, 250, 255, 1) 100%);height: 2px;display: block;"></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding-bottom: 15px;">
+                <p style="font-size: 20px; font-weight: 500; margin: 0; font-family: 'Roboto', sans-serif;">
+                    Rent Verification
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 33.3%; padding-right: 10px; vertical-align: text-top;">
+                            <table style="border: 1px solid #999; padding: 12px 12px; border-radius: 10px; width: 100%;">
+                                <tr>
+                                    <td colspan="2" style="background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(93, 31, 201, 1) 0%, rgba(180, 78, 218, 1) 100%);padding: 6px 10px 7px;border-radius: 4px;color: #fff;font-size: 12px;font-family: 'Roboto', sans-serif;">
+                                        Consecutive Recognized Payments
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 15px 0;">
+                                        <p style="color: #777; margin: 0; font-size: 30px; font-weight: 500; text-align: center; font-family: 'Roboto', sans-serif;">
+                                            {MaxConsecutive}
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 15px;">
+                                        <p style="font-size: 12px; margin: 0; font-weight: 500; font-family: 'Roboto', sans-serif;">
+                                            Number of consecutive payments recognized as rent.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 33.3%; padding-right: 10px; padding-left: 10px; vertical-align: text-top;">
+                            <table style="border: 1px solid #999; padding: 12px 12px; border-radius: 10px; width: 100%;">
+                                <tr>
+                                    <td colspan="2"
+                                        style="background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(93, 31, 201, 1) 0%, rgba(180, 78, 218, 1) 100%);padding: 6px 10px 7px;border-radius: 4px;color: #fff;font-size: 12px;font-family: 'Roboto', sans-serif;">
+                                        Consecutive Candidate Payments
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 15px 0;">
+                                        <p style="color: #777; margin: 0; font-size: 30px; font-weight: 500; text-align: center; font-family: 'Roboto', sans-serif;">
+                                            {CCTrend}
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 0;">
+                                        <p style="font-size: 12px; margin: 0; font-weight: 500; font-family: 'Roboto', sans-serif;">
+                                            Number of consecutive payments categorized as potential rent.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 33.3%; padding-right: 10px; padding-left: 10px; vertical-align: text-top;">
+                            <table style="border: 1px solid #999; padding: 12px 12px; border-radius: 10px; width: 100%;">
+                                <tr>
+                                    <td colspan="2" style="background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(93, 31, 201, 1) 0%, rgba(180, 78, 218, 1) 100%);padding: 6px 10px 7px;border-radius: 4px;color: #fff;font-size: 12px;font-family: 'Roboto', sans-serif;">
+                                        Stated Rent Amount
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 15px 0;">
+                                        <p style="color: #777; margin: 0; font-size: 30px; font-weight: 500; text-align: center; font-family: 'Roboto', sans-serif;">
+                                            $ {TotalMonthlyIncomeTrend}
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 13px;">
+                                        <p style="font-size: 12px; margin: 0; font-weight: 500; font-family: 'Roboto', sans-serif;">
+                                            Rent payment from URLA.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding: 30px 0;">
+                <table style="width: 100%; border-spacing: 5px;">
+                    <tr>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: left; font-weight: 500; border-radius: 4px; padding: 5px 10px; background-color: #919191; color: #fff; font-size: 13px;">
+                            Date
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: left; font-weight: 500; border-radius: 4px; padding: 5px 10px; background-color: #919191; color: #fff; font-size: 13px;">
+                            Amount
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: left; font-weight: 500; border-radius: 4px; padding: 5px 10px; background-color: #919191; color: #fff; font-size: 13px;">
+                            Acct. #
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: left; font-weight: 500; border-radius: 4px; padding: 5px 10px; background-color: #919191; color: #fff; font-size: 13px;">
+                            Description
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            {Date}
+                        </td>
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            $ {Amount}
+                        </td>
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            {AccountId}
+                        </td>
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            {Description}
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding-bottom: 15px;">
+                <p style="font-size: 20px; font-weight: 500; margin: 0; font-family: 'Roboto', sans-serif;">
+                    Other Recurring Payments
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table style="width: 100%;">
+                    <tr>
+                        <td style="width: 50%; padding-right: 10px; vertical-align: text-top;">
+                            <table style="border: 1px solid #999; padding: 12px 12px; border-radius: 10px; width: 100%;">
+                                <tr>
+                                    <td colspan="2"
+                                        style="background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(93, 31, 201, 1) 0%, rgba(180, 78, 218, 1) 100%);padding: 6px 10px 7px;border-radius: 4px;color: #fff;font-size: 12px;font-family: 'Roboto', sans-serif;">
+                                        Consecutive Recognized Utility Payments
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 15px 0;">
+                                        <p style="color: #777; margin: 0; font-size: 30px; font-weight: 500; text-align: center; font-family: 'Roboto', sans-serif;">
+                                            {BankAccountTrend}
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 0;">
+                                        <p style="font-size: 12px; margin: 0; font-weight: 500; font-family: 'Roboto', sans-serif;">
+                                            Consecutive months of consistent utility payments.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="width: 50%; padding-left: 10px; vertical-align: text-top;">
+                            <table style="border: 1px solid #999; padding: 12px 12px; border-radius: 10px; width: 100%;">
+                                <tr>
+                                    <td colspan="2" style="background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(93, 31, 201, 1) 0%, rgba(180, 78, 218, 1) 100%);padding: 6px 10px 7px;border-radius: 4px;color: #fff;font-size: 12px;font-family: 'Roboto', sans-serif;">
+                                        Average Montly Utility Payment
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 15px 0;">
+                                        <p style="color: #777; margin: 0; font-size: 30px; font-weight: 500; text-align: center; font-family: 'Roboto', sans-serif;">
+                                            $ {ProspectiveCashFlowIndexMonthly500}
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="padding-bottom: 0;">
+                                        <p style="font-size: 12px; margin: 0; font-weight: 500; font-family: 'Roboto', sans-serif;">
+                                            Average monthly amont.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding: 30px 0;">
+                <table class="calender-table" style="width: 100%; border-spacing: 5px;">
+                    <tr>
+                        <th></th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Jan-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Feb-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Mar-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Apr-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            May-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Jun-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Jul-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Aug-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Sep-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Oct-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Nov-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Dec-22
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            Mortgage Payments
+                        </td>
+                        {tableData}
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <p style="margin: 0; font-size: 30px; font-weight: 500; font-family: 'Roboto', sans-serif;">
+                    Income & Expense Summary
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding: 15px 0 20px;">
+                <p style="margin: 0; font-size: 24px; font-weight: 400; font-family: 'Roboto', sans-serif;">
+                    Monthly Income
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table class="calender-table" style="width: 100%; border-spacing: 5px;">
+                    <tr>
+                        <th></th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Jan-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Feb-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Mar-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Apr-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            May-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Jun-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Jul-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Aug-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Sep-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Oct-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Nov-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Dec-22
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            Payroll Deposits
+                        </td>
+                        {tableData}
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" colspan="2" style="padding: 30px 0;">
+                <span style="background: linear-gradient(90deg, rgba(193, 139, 64, 0) -30%, rgba(193, 57, 19, 1) 27%, rgba(36, 112, 230, 1) 46%, rgba(62, 200, 159, 1) 72%, rgba(47, 237, 237, 1) 100%, rgba(245, 250, 255, 1) 100%); height: 2px; display: block;"></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="padding: 0 0 20px;">
+                <p style="margin: 0; font-size: 24px; font-weight: 400; font-family: 'Roboto', sans-serif;">
+                    Monthly Expenses
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <table class="calender-table" style="width: 100%; border-spacing: 5px;">
+                    <tr>
+                        <th></th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Jan-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Feb-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Mar-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Apr-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            May-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Jun-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Jul-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Aug-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Sep-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Oct-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Nov-22
+                        </th>
+                        <th style="font-family: 'Roboto', sans-serif; text-align: right; font-weight: 500; border-radius: 4px; background-color: #919191; color: #fff;">
+                            Dec-22
+                        </th>
+                    </tr>
+                    <tr>
+                        <td style="font-family: 'Roboto', sans-serif; font-size: 13px; border-radius: 4px; border: 1px solid #ddd; padding: 5px 10px; white-space: nowrap;">
+                            Student Loan Payments
+                        </td>
+                        {tableData}
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
