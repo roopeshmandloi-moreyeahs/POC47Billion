@@ -35,9 +35,7 @@ namespace JSON_To_PDF.Repository.Services
 
                     foreach (var filepath in File_Paths)
                     {
-
-                        // to read file and return html string
-
+                        /// to read file and return html string
                         string htmlContent;
 
                         using (var reader = new StreamReader(@"Views/QualifiedBorrowerReport.cshtml"))
@@ -48,7 +46,7 @@ namespace JSON_To_PDF.Repository.Services
                         //to read file and return html string
 
                         string htmlCode = PopulateHtmlWithDynamicValues(htmlContent, rikiResult);
-                       // var convertedInByte = await ConvertHtmlToPdf(htmlCode);
+                       
                         result = await GeneratePdfFromModel(htmlCode);
                         
                         if (result != null && result.Status && result.PdfInByte != null)
@@ -145,15 +143,13 @@ namespace JSON_To_PDF.Repository.Services
         {
             try
             {
-                //var result = _razorLightEngine.CompileRenderAsync(filePath, model).GetAwaiter().GetResult();
-
-                //testing with html
+                ///testing with html
 
                 string templateKey = "myUniqueTemplateKey" + DateTime.Now.ToString("dd-H.mmtt");
                 var result = _razorLightEngine.CompileRenderStringAsync(templateKey,
                     htmlContent, model).GetAwaiter().GetResult();
 
-                //testing with html
+                ///testing with html
 
                 return result;
 
@@ -174,10 +170,10 @@ namespace JSON_To_PDF.Repository.Services
                 var doc = new HtmlToPdfDocument()
                 {
                     GlobalSettings = {
-                ColorMode = ColorMode.Color,
-                Orientation = Orientation.Portrait,
-                PaperSize = PaperKind.A4
-                },
+                        ColorMode = ColorMode.Color,
+                        Orientation = Orientation.Portrait,
+                        PaperSize = PaperKind.A4,
+                    },
                     Objects =
                 {
                   new ObjectSettings()
@@ -186,12 +182,14 @@ namespace JSON_To_PDF.Repository.Services
                     HtmlContent = htmlCode,
                     UseLocalLinks = true,
                     UseExternalLinks = true,
-                    WebSettings = { DefaultEncoding = "utf-8",UserStyleSheet = Path.Combine(Directory.GetCurrentDirectory(), @"styles.css"),
+                    WebSettings = { DefaultEncoding = "utf-8",
                     EnableJavascript=true,
+                    PrintMediaType=true,
+                    
                       },
                     LoadSettings={RepeatCustomHeaders =true},
                  HeaderSettings = { FontName = "Arial", FontSize = 9, Line = false, Center="47Billion"},
-                FooterSettings = { FontName = "Arial", FontSize = 9, Line = false,Center="47Billion"}
+                 FooterSettings = { FontName = "Arial", FontSize = 9, Line = false,Center="47Billion"}
 
                    }
                 },
